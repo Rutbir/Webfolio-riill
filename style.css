@@ -63,6 +63,44 @@
 .btn:hover a{
     color: var(--primary-color);
 }
+.section{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 12%;
+    gap: 50px;
+}
+
+.section_title{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: var(--white);
+    z-index: 1;
+}
+
+.section_title .span{
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+}
+
+.section_title h2{
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.section_title p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--white-light);
+    line-height: 30px;
+}
 
 body {
     background-color: var(--black);
@@ -130,6 +168,88 @@ body {
 .nav_btn a{
     font-size: 1rem;
     font-weight: 600;
+}
+
+/* Hero Section */
+.hero{
+    min-height: 88vh;
+    width: 100%;
+    position: relative;
+}
+
+.hero::before{
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -30%;
+    height: 100%;
+    width: 80%;
+    border-radius: 100%;
+    filter: blur(30px);
+    background: radial-gradient(circle, var(--primary-color) 0%, transparent 65%);
+    opacity: .3;
+    z-index: 0;
+}
+
+.hero::after{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: var(--black-light);
+    opacity: 0.2;
+}
+
+#span{
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    margin: 0px 0px 20px;
+}
+.hero_title{
+    width: 60%;
+    gap: 0;
+}
+
+.hero_title h1{
+    font-size: 4.5rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: var(--white);
+    margin: 0px 0px 10px;
+}
+
+.hero_title h3{
+    font-size: 2rem;
+    margin: 0px 0px 20px;
+}
+
+.hero_title h1 span{
+    color: var(--primary-color);
+}
+
+.hero_title p{
+    width: 70%;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.hero_btn{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+.hero_btn .btn{
+    width: 150px;
+}
+
+.protection{
+    position: absolute;
+    top: 0;
+    right: -25%;
 }
 
 @media screen and (max-width:1200px) {
